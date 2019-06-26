@@ -2,6 +2,8 @@ require "rest-client"
 require "pry"
 require "json"
 
+
+
 # Get the search term from the user
 def get_search_term
   puts "Please enter a search term:"
