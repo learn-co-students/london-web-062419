@@ -1,5 +1,4 @@
 class User
-
   # Get the user's username
   attr_reader(:username)
 

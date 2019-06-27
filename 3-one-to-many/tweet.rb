@@ -3,7 +3,7 @@ class Tweet
   # Get the user it belongs to
   attr_reader(:message, :user)
 
-  # Class variable to keep track of every instance of Tweet
+  # Class variable to keep track of every instance of Tweet - our single source of truth for all instances of Tweet
   @@all = []
 
   # Get a list of every instance of Tweet that's been created
