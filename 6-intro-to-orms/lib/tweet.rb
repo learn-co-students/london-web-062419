@@ -32,6 +32,9 @@ class Tweet
       # CREATE
       sql = "INSERT INTO tweets(message, username) VALUES(?, ?);"
       DB[:conn].execute(sql, self.message, self.username)
+
+     # After we save this record to the database, it will be assigned an id. Here, we set the id of the instance by getting the id of the row we just added to the tweets table
+     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM tweets").first["last_insert_rowid()"]
     end
   end
 
