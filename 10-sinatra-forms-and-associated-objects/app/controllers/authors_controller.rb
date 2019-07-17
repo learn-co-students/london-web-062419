@@ -23,10 +23,12 @@ class AuthorsController < ApplicationController
   end
 
   post "/authors/?" do
-    # Create my author here
+    # Create our new instance of author with the values within the nested resource hash.
     @author = Author.create(first_name: params[:author][:first_name], last_name: params[:author][:last_name])
 
+    # Iterate through the array of hashes that represent books that belong to the author we just created.
     params[:author][:books].each do |book|
+      # For each book hash, create a new instance of book with the values from the hash and set its author to be the author we just created.
       Book.create(title: book[:title], snippet: book[:snippet], author_id: @author.id)
     end
 
