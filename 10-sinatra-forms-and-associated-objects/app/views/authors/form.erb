@@ -1,0 +1,24 @@
+<form class="" action="/authors/<%= @author.id %>" method="POST">
+
+  <label for="">First Name</label>
+  <input type="text" name="author[first_name]" value=""><br>
+
+  <label for="">Last Name</label>
+  <input type="text" name="author[last_name]" value=""><br>
+
+  <label for="">Book 1 Title</label>
+  <input type="text" name="author[books][][title]" value=""><br>
+  <label for="">Book 1 Snippet</label>
+  <input type="text" name="author[books][][snippet]" value=""><br>
+
+  <label for="">Book 2 Title</label>
+  <input type="text" name="author[books][][title]" value=""><br>
+  <label for="">Book 2 Snippet</label>
+  <input type="text" name="author[books][][snippet]" value=""><br>
+
+  <input type="submit" name="" value="Save Author">
+
+  <% if @author.id %>
+    <input type="hidden" name="_method" value="PATCH">
+  <% end %>
+</form>
