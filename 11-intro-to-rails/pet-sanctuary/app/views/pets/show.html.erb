@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+<h2><%= @pet.name %></h2>
+
+<!-- The edit_pet_path will give us /pets/:id, by passing in @pet as an argument, it will replace :id with the id for that instance of pet, allowing us to access that specific pet's edit page. -->
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
