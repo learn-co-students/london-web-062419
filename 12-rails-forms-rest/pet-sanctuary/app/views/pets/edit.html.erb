@@ -1,0 +1,7 @@
+<h1>Editing Pet</h1>
+
+<!-- Render our form_for, using this specific instance of a pet. Because we are going via the edit route, the instance of pet already exists in our database, allowing us to update it with new values. -->
+<%= render "form", pet: @pet %>
+
+<%= link_to 'Show', @pet %> |
+<%= link_to 'Back', pets_path %>

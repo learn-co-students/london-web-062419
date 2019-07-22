@@ -1,0 +1,5 @@
+<h1>New Pet</h1>
+<!-- Render our form_for, using this specific instance of a pet. Because we are going via the new route, the instance of pet will be blank, allowing us to create a new one. -->
+<%= render "form", pet: @pet %>
+
+<%= link_to 'Back', pets_path %>

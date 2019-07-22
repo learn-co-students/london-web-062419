@@ -1,0 +1,10 @@
+<!-- form_form should be used to create forms that are intended to create or update an instance of a model. -->
+<%= form_for @pet do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :age %><br>
+  <%= f.number_field :age %><br>
+
+  <%= f.submit %>
+<% end %>

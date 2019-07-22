@@ -1,0 +1,10 @@
+<!-- form_tag should be used to create forms that do not create or update an instance of a model e.g. a login form. -->
+<%= form_tag pets_path do %>
+  <%= label :pet, :name %><br>
+  <%=  text_field :pet, :name %><br>
+
+  <%= label :pet, :age %><br>
+  <%=  number_field :pet, :age %><br>
+
+  <%= submit_tag "Save Pet"%>
+<% end %>
