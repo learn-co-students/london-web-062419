@@ -1,0 +1,1258 @@
+Started GET "/" for 127.0.0.1 at 2019-07-23 15:17:07 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sneves/.rvm/gems/ruby-2.6.1/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sneves/.rvm/gems/ruby-2.6.1/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 134ms (Views: 5.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSeas (20190723143311)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "seas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "temperature" float, "bio" text, "image_url" varchar, "mood" varchar, "favorite_color" varchar, "scariest_creature" varchar, "has_mermaids" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190723143311"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-23 14:34:45.558471"], ["updated_at", "2019-07-23 14:34:45.558471"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mediterranean"], ["temperature", 68.3], ["bio", "Friendly, welcoming and warm. Everyone's got a few sirens in their closet, but I'm ready for love."], ["image_url", "https://cies.einaudi.cornell.edu/sites/cies/files/Mediterranean%20from%20istock%20%281%29.jpg"], ["mood", "Happy-go-lucky"], ["favorite_color", "Blue"], ["scariest_creature", "Poseidon"], ["created_at", "2019-07-23 14:35:58.686949"], ["updated_at", "2019-07-23 14:35:58.686949"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "has_mermaids", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Java"], ["temperature", 43.1], ["bio", "I took a midnight train going anYYYwhere."], ["image_url", "http://pixdaus.com/files/items/pics/9/87/278987_b7f697606999ec226af227bed106745a_large.jpg"], ["mood", "Energetic"], ["favorite_color", "Blue"], ["scariest_creature", "compiling error"], ["has_mermaids", "f"], ["created_at", "2019-07-23 14:35:58.690366"], ["updated_at", "2019-07-23 14:35:58.690366"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arctic"], ["temperature", 28.8], ["bio", "Don't be turned off by my chilling personality, I'm actually not."], ["image_url", "https://www.trinitynewsdaily.com/wp-content/uploads/2015/03/arctic-sea-ice.jpg"], ["mood", "Salty"], ["favorite_color", "Blue"], ["scariest_creature", "Kraken"], ["created_at", "2019-07-23 14:35:58.692230"], ["updated_at", "2019-07-23 14:35:58.692230"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "has_mermaids", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dead"], ["temperature", 103.1], ["bio", "Learn, Love, Code"], ["image_url", "https://twistedsifter.files.wordpress.com/2012/06/dead-sea-salt.jpg"], ["mood", "Sullen"], ["favorite_color", "Blue"], ["scariest_creature", "Ice King"], ["has_mermaids", "f"], ["created_at", "2019-07-23 14:35:58.693660"], ["updated_at", "2019-07-23 14:35:58.693660"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Caribbean"], ["temperature", 82.5], ["bio", "Small town guy with big dreams."], ["image_url", "https://dsx.weather.com//util/image/w/carib_0.jpg?v=ap&w=980&h=551&api=7db9fe61-7414-47b5-9871-e17d87b8b6a0"], ["mood", "Sunny"], ["favorite_color", "Blue-Green"], ["scariest_creature", "Vampire Shark"], ["created_at", "2019-07-23 14:35:58.695208"], ["updated_at", "2019-07-23 14:35:58.695208"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Baltic"], ["temperature", 50.1], ["bio", "I like to go for long walks on the beach."], ["image_url", "http://balticrally.superlative-adventure.com/files/sac/content/images/BSC/header/2016_BSC_Header/Baltic_Sea_Circle-30.jpg"], ["mood", "Stormy"], ["favorite_color", "Blue"], ["scariest_creature", "Pirate Viking Ghosts"], ["created_at", "2019-07-23 14:35:58.696637"], ["updated_at", "2019-07-23 14:35:58.696637"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Irish"], ["temperature", 59.9], ["bio", "Aym jes a wee bairn, bu m'hart ees big."], ["image_url", "http://www.independent.ie/irish-news/article31478924.ece/ALTERNATES/h342/2015-08-26_iri_12291614_I1.JPG"], ["mood", "Broodin"], ["favorite_color", "Blue"], ["scariest_creature", "Angered ma wen thee yooths air misbeheevin"], ["created_at", "2019-07-23 14:35:58.698358"], ["updated_at", "2019-07-23 14:35:58.698358"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-07-23 15:54:32 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/sneves/.rvm/gems/ruby-2.6.1/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/sneves/.rvm/gems/ruby-2.6.1/gems/railties-5.1.3/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 15:54:39 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  Rendered seas/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected class, expecting do or '{' or '('
+...fer.append=( link_to <img class="card-img-top img-thumbnail"...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rd-img-top img-thumbnail" style="height: 15rem" src="<%= sea...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nail" style="height: 15rem" src="<%= sea.image_url );@output...
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...utput_buffer.safe_append='" alt="sea">, sea_path(sea) %>
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected ','
+...ffer.safe_append='" alt="sea">, sea_path(sea) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+...'" alt="sea">, sea_path(sea) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+            <h4 class="card-title text-cen...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:14: unknown regexp option - p
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+            <a href="/seas/'.freeze;@outpu...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style="width: 100%" class="btn btn...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting ')'
+...nd='" style="width: 100%" class="btn btn-info">Sea Profile</...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+...lass="btn btn-info">Sea Profile</a>
+...                        ^~~~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:16: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+        </div>
+        ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:18: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:21: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: unterminated string meets end of file
+          end
+              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/seas/index.html.erb:11: syntax error, unexpected class, expecting do or '{' or '('
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected ','
+app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+app/views/seas/index.html.erb:14: unknown regexp option - p
+app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting ')'
+app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/seas/index.html.erb:16: unknown regexp options - dv
+app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+app/views/seas/index.html.erb:18: unknown regexp options - dv
+app/views/seas/index.html.erb:21: unknown regexp options - dv
+app/views/seas/index.html.erb:26: unterminated string meets end of file
+app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/seas/1" for 127.0.0.1 at 2019-07-23 15:54:52 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSea Load (0.3ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 37ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionController::UnknownFormat (SeasController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/seas/annemarie" for 127.0.0.1 at 2019-07-23 15:56:49 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"annemarie"}
+Completed 500 Internal Server Error in 67797ms
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/seas_controller.rb:10:in `show'
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 15:58:26 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  Rendered seas/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 33ms
+
+
+  
+SyntaxError (/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected class, expecting do or '{' or '('
+...fer.append=( link_to <img class="card-img-top img-thumbnail"...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rd-img-top img-thumbnail" style="height: 15rem" src="<%= sea...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nail" style="height: 15rem" src="<%= sea.image_url );@output...
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...utput_buffer.safe_append='" alt="sea">, sea_path(sea) %>
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected ','
+...ffer.safe_append='" alt="sea">, sea_path(sea) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+...'" alt="sea">, sea_path(sea) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+            <h4 class="card-title text-cen...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:14: unknown regexp option - p
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+            <a href="/seas/'.freeze;@outpu...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+...put_buffer.safe_append='" style="width: 100%" class="btn btn...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting ')'
+...nd='" style="width: 100%" class="btn btn-info">Sea Profile</...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+...lass="btn btn-info">Sea Profile</a>
+...                        ^~~~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:16: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+        </div>
+        ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:18: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:21: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: unterminated string meets end of file
+          end
+              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/seas/index.html.erb:11: syntax error, unexpected class, expecting do or '{' or '('
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected ','
+app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+app/views/seas/index.html.erb:14: unknown regexp option - p
+app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting ')'
+app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/seas/index.html.erb:16: unknown regexp options - dv
+app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+app/views/seas/index.html.erb:18: unknown regexp options - dv
+app/views/seas/index.html.erb:21: unknown regexp options - dv
+app/views/seas/index.html.erb:26: unterminated string meets end of file
+app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 15:59:16 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  Rendered seas/index.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 28ms
+
+
+  
+SyntaxError (/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+...utput_buffer.append=( link_to(<img class="card-img-top img-t...
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rd-img-top img-thumbnail" style="height: 15rem" src="<%= sea...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nail" style="height: 15rem" src="<%= sea.image_url );@output...
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...utput_buffer.safe_append='" alt="sea">, sea_path(sea)) %>
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected ','
+...ffer.safe_append='" alt="sea">, sea_path(sea)) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+..." alt="sea">, sea_path(sea)) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+            <h4 class="card-title text-cen...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:14: unknown regexp option - p
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+            <a href="/seas/'.freeze;@outpu...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting end
+...put_buffer.safe_append='" style="width: 100%" class="btn btn...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting end
+...nd='" style="width: 100%" class="btn btn-info">Sea Profile</...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+...lass="btn btn-info">Sea Profile</a>
+...                        ^~~~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:16: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+        </div>
+        ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:18: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:21: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: unterminated string meets end of file
+          end
+              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected ','
+app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+app/views/seas/index.html.erb:14: unknown regexp option - p
+app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting end
+app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/seas/index.html.erb:16: unknown regexp options - dv
+app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+app/views/seas/index.html.erb:18: unknown regexp options - dv
+app/views/seas/index.html.erb:21: unknown regexp options - dv
+app/views/seas/index.html.erb:26: unterminated string meets end of file
+app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting end
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:01:01 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  Rendered seas/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 33ms
+
+
+  
+SyntaxError (/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+...utput_buffer.append=( link_to(<img class="card-img-top img-t...
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rd-img-top img-thumbnail" style="height: 15rem" src=<%= sea....
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nail" style="height: 15rem" src=<%= sea.image_url );@output_...
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:19: syntax error, unexpected end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:24: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:19: syntax error, unexpected end, expecting ')'
+app/views/seas/index.html.erb:24: syntax error, unexpected ensure, expecting ')'
+app/views/seas/index.html.erb:26: syntax error, unexpected end, expecting ')'
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:02:08 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  Rendered seas/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 32ms
+
+
+  
+SyntaxError (/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+...utput_buffer.append=( link_to(<img class="card-img-top img-t...
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rd-img-top img-thumbnail" style="height: 15rem" src= sea.ima...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nail" style="height: 15rem" src= sea.image_url alt="sea">, s...
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected ','
+... src= sea.image_url alt="sea">, sea_path(sea)) );@output_buf...
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected ')', expecting end
+...rl alt="sea">, sea_path(sea)) );@output_buffer.safe_append='
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:24: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected ','
+app/views/seas/index.html.erb:11: syntax error, unexpected ')', expecting end
+app/views/seas/index.html.erb:24: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:02:54 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  Rendered seas/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 33ms
+
+
+  
+SyntaxError (/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+...utput_buffer.append=( link_to(<img class="card-img-top img-t...
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rd-img-top img-thumbnail" style="height: 15rem" src= "<%= se...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...nail" style="height: 15rem" src= "<%= sea.image_url );@outpu...
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...utput_buffer.safe_append='" alt="sea">, sea_path(sea)) %>
+...                            ^~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected ','
+...ffer.safe_append='" alt="sea">, sea_path(sea)) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+..." alt="sea">, sea_path(sea)) %>
+...                              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+            <h4 class="card-title text-cen...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:14: unknown regexp option - p
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+            <a href="/seas/'.freeze;@outpu...
+            ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting end
+...put_buffer.safe_append='" style="width: 100%" class="btn btn...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting end
+...nd='" style="width: 100%" class="btn btn-info">Sea Profile</...
+...                          ^~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+...lass="btn btn-info">Sea Profile</a>
+...                        ^~~~~~~
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:16: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+        </div>
+        ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:18: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:21: unknown regexp options - dv
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: unterminated string meets end of file
+          end
+              ^
+/Users/sneves/Development/code/lab_reviews/mod-two-week-one-review-london-web-062419/Rails-Seven-Seas/app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/seas/index.html.erb:11: syntax error, unexpected '<', expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/seas/index.html.erb:11: syntax error, unexpected ','
+app/views/seas/index.html.erb:11: syntax error, unexpected '>'
+app/views/seas/index.html.erb:13: syntax error, unexpected '<'
+app/views/seas/index.html.erb:14: unknown regexp option - p
+app/views/seas/index.html.erb:15: syntax error, unexpected '<'
+app/views/seas/index.html.erb:15: syntax error, unexpected tIDENTIFIER, expecting end
+app/views/seas/index.html.erb:15: syntax error, unexpected class, expecting end
+app/views/seas/index.html.erb:15: syntax error, unexpected tCONSTANT, expecting do or '{' or '('
+app/views/seas/index.html.erb:16: unknown regexp options - dv
+app/views/seas/index.html.erb:17: syntax error, unexpected '<'
+app/views/seas/index.html.erb:18: unknown regexp options - dv
+app/views/seas/index.html.erb:21: unknown regexp options - dv
+app/views/seas/index.html.erb:26: unterminated string meets end of file
+app/views/seas/index.html.erb:26: syntax error, unexpected end-of-input, expecting end
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:03:41 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (5.4ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (181.4ms)
+Completed 200 OK in 2277ms (Views: 2256.7ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/seas/1" for 127.0.0.1 at 2019-07-23 16:03:59 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSea Load (1.2ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 53ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionController::UnknownFormat (SeasController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/seas/1" for 127.0.0.1 at 2019-07-23 16:04:49 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 48ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::UnknownFormat (SeasController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:04:55 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.1ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 293ms (Views: 273.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/seas/1" for 127.0.0.1 at 2019-07-23 16:05:00 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSea Load (0.7ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 52ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (SeasController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.3) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:05:39 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.2ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 343ms (Views: 324.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:07:07 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (7.9ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 321ms (Views: 297.9ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:08:23 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.2ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 274ms (Views: 259.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/seas/1" for 127.0.0.1 at 2019-07-23 16:08:25 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSea Load (1.0ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 229ms (Views: 196.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/seas/1" for 127.0.0.1 at 2019-07-23 16:14:22 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSea Load (0.2ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 218ms (Views: 203.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/seas/new" for 127.0.0.1 at 2019-07-23 16:14:25 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mSea Load (0.5ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Sea with 'id'=new):
+  
+app/controllers/seas_controller.rb:9:in `show'
+Started GET "/seas/new" for 127.0.0.1 at 2019-07-23 16:17:13 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SeasController#new as HTML
+  Rendering seas/new.html.erb within layouts/application
+  Rendered seas/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 172ms (Views: 162.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/seas/new" for 127.0.0.1 at 2019-07-23 16:33:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SeasController#new as HTML
+  Rendering seas/new.html.erb within layouts/application
+  Rendered seas/new.html.erb within layouts/application (140.9ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `path' for #<#<Class:0x00007f84990588e8>:0x00007f849907a240>):
+    27: 
+    28:   <% end %>
+    29: 
+    30:   <%= link_to "All_seas", path %>
+  
+app/views/seas/new.html.erb:30:in `_app_views_seas_new_html_erb__1157737735490878403_70103739869420'
+Started GET "/seas/new" for 127.0.0.1 at 2019-07-23 16:33:54 +0100
+Processing by SeasController#new as HTML
+  Rendering seas/new.html.erb within layouts/application
+  Rendered seas/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 174ms (Views: 171.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seas" for 127.0.0.1 at 2019-07-23 16:34:01 +0100
+Processing by SeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8M/mF8dKuzbhUuURzm00z7zmGiHWLwzYxaeWgupaWEP8HPGWb7tugHQvBkFA6+ElXsMGeHfKnmHWie8Yj/w+5g==", "sea"=>{"name"=>"ad", "temperature"=>"", "bio"=>"", "image_url"=>"", "mood"=>"", "favorite_color"=>"", "scariest_creature"=>"", "has_mermaids"=>"1"}, "commit"=>"Create Sea"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 300977ms (ActiveRecord: 0.3ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/seas_controller.rb:19:in `create'
+Started POST "/seas" for 127.0.0.1 at 2019-07-23 16:45:52 +0100
+Processing by SeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8M/mF8dKuzbhUuURzm00z7zmGiHWLwzYxaeWgupaWEP8HPGWb7tugHQvBkFA6+ElXsMGeHfKnmHWie8Yj/w+5g==", "sea"=>{"name"=>"ad", "temperature"=>"", "bio"=>"", "image_url"=>"", "mood"=>"", "favorite_color"=>"", "scariest_creature"=>"", "has_mermaids"=>"1"}, "commit"=>"Create Sea"}
+  Rendering seas/new.html.erb within layouts/application
+  Rendered seas/new.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 319ms (Views: 199.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:46:18 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.1ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (58.4ms)
+Completed 200 OK in 251ms (Views: 228.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/seas/7" for 127.0.0.1 at 2019-07-23 16:46:23 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSea Load (1.4ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 223ms (Views: 184.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/seas/7/edit" for 127.0.0.1 at 2019-07-23 16:46:26 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSea Load (1.1ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 271ms (Views: 243.3ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/seas/7" for 127.0.0.1 at 2019-07-23 16:46:32 +0100
+Processing by SeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DAY9fUgRPDAv9e9ZT6Xue3cU/7O60wvmCNJeOn7piGIjdjuPWlnmjLxTDPxiQEX9Zyiv+QrS+fqxJNDEQgi23g==", "sea"=>{"name"=>"Ir", "temperature"=>"59.9", "bio"=>"Aym jes a wee bairn, bu m'hart ees big.", "image_url"=>"http://www.independent.ie/irish-news/article31478924.ece/ALTERNATES/h342/2015-08-26_iri_12291614_I1.JPG", "mood"=>"Broodin", "favorite_color"=>"Blue", "scariest_creature"=>"Angered ma wen thee yooths air misbeheevin", "has_mermaids"=>"1"}, "commit"=>"Update Sea", "id"=>"7"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+No template found for SeasController#update, rendering head :no_content
+Completed 204 No Content in 91ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/seas/7/edit" for 127.0.0.1 at 2019-07-23 16:47:04 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSea Load (1.3ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 475ms (Views: 247.0ms | ActiveRecord: 7.7ms)
+
+
+Started PATCH "/seas/7" for 127.0.0.1 at 2019-07-23 16:47:09 +0100
+Processing by SeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0lz3uuoXBcfUPlMFpXq269rHw8+YMX4IFOP61XVs2ynej+A7QubQcUFDsFUr/GMBOOLfljnU7LEHzYNPEMq9jA==", "sea"=>{"name"=>"Ir", "temperature"=>"59.9", "bio"=>"Aym jes a wee bairn, bu m'hart ees big.", "image_url"=>"http://www.independent.ie/irish-news/article31478924.ece/ALTERNATES/h342/2015-08-26_iri_12291614_I1.JPG", "mood"=>"Broodin", "favorite_color"=>"Blue", "scariest_creature"=>"Angered ma wen thee yooths air misbeheevin", "has_mermaids"=>"1"}, "commit"=>"Update Sea", "id"=>"7"}
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 525460ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 16:55:54 +0100
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/seas_controller.rb:41:in `update'
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (5.2ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (147.7ms)
+Completed 200 OK in 337ms (Views: 314.9ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/seas/new" for 127.0.0.1 at 2019-07-23 16:56:06 +0100
+Processing by SeasController#new as HTML
+  Rendering seas/new.html.erb within layouts/application
+  Rendered seas/new.html.erb within layouts/application (82.4ms)
+Completed 200 OK in 288ms (Views: 268.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/seas/new" for 127.0.0.1 at 2019-07-23 16:56:14 +0100
+Processing by SeasController#new as HTML
+  Rendering seas/new.html.erb within layouts/application
+  Rendered seas/new.html.erb within layouts/application (81.8ms)
+Completed 200 OK in 278ms (Views: 259.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/seas" for 127.0.0.1 at 2019-07-23 16:58:04 +0100
+Processing by SeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bEJNDWhBHve5U3A6XWZr9IKmecsHBtxBErjxXzlzD5hIqyB6JFxPTrkIa0C1gyfyzV6YvA4RfNcrOJUrE9pAXQ==", "sea"=>{"name"=>"brexit", "temperature"=>"300000000", "bio"=>"but also very cold, so were fucked", "image_url"=>"https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiz95GAtMvjAhVIOhoKHVy-AUYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.express.co.uk%2Fnews%2Fpolitics%2F1156755%2Fboris-johnson-prime-minister-tory-leader-results-jeremy-hunt-PM-brexit-cabinet&psig=AOvVaw2zlRHQ6mZMbRdEsOflOyJp&ust=1563983847142916", "mood"=>"gloomy", "favorite_color"=>"black", "scariest_creature"=>"nigel farage", "has_mermaids"=>"1"}, "commit"=>"Create Sea"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "brexit"], ["temperature", 300000000.0], ["bio", "but also very cold, so were fucked"], ["image_url", "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiz95GAtMvjAhVIOhoKHVy-AUYQjRx6BAgBEAU&url=https%3A%2F%2Fwww.express.co.uk%2Fnews%2Fpolitics%2F1156755%2Fboris-johnson-prime-minister-tory-leader-results-jeremy-hunt-PM-brexit-cabinet&psig=AOvVaw2zlRHQ6mZMbRdEsOflOyJp&ust=1563983847142916"], ["mood", "gloomy"], ["favorite_color", "black"], ["scariest_creature", "nigel farage"], ["created_at", "2019-07-23 15:58:04.932659"], ["updated_at", "2019-07-23 15:58:04.932659"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/seas/8
+Completed 302 Found in 74ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 16:58:04 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (1.0ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 266ms (Views: 233.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 16:58:14 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (1.3ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 240ms (Views: 220.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 16:59:14 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (1.5ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (109.0ms)
+Completed 200 OK in 343ms (Views: 305.8ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/seas/8" for 127.0.0.1 at 2019-07-23 16:59:20 +0100
+Processing by SeasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jQN8WZBxWED81V7g0xzwvkbc3x0idFGZVNGQYllzqqbR+e9c/OvL/MAT9ko1kRp//SgH/PguWULNWNL7yzsW+A==", "sea"=>{"name"=>"brexit", "temperature"=>"300000000.0", "bio"=>"but also very cold, so were fucked", "image_url"=>"https://cdn.images.express.co.uk/img/dynamic/139/590x/boris-johnson-prime-minister-tory-leader-results-jeremy-hunt-PM-brexit-cabinet-1156755.jpg?r=1563890305058", "mood"=>"gloomy", "favorite_color"=>"black", "scariest_creature"=>"nigel farage", "has_mermaids"=>"1"}, "commit"=>"Update Sea", "id"=>"8"}
+  [1m[36mSea Load (1.2ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "seas" SET "image_url" = ?, "updated_at" = ? WHERE "seas"."id" = ?[0m  [["image_url", "https://cdn.images.express.co.uk/img/dynamic/139/590x/boris-johnson-prime-minister-tory-leader-results-jeremy-hunt-PM-brexit-cabinet-1156755.jpg?r=1563890305058"], ["updated_at", "2019-07-23 15:59:21.053726"], ["id", 8]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/seas/8
+Completed 302 Found in 98ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 16:59:21 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.7ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 250ms (Views: 226.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 16:59:27 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (7.2ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 306ms (Views: 275.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 17:01:53 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (99.8ms)
+Completed 200 OK in 344ms (Views: 320.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 17:01:55 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 242ms (Views: 216.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 17:02:01 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (116.9ms)
+Completed 200 OK in 341ms (Views: 307.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 17:02:03 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (1.1ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 242ms (Views: 212.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 17:02:04 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (102.5ms)
+Completed 200 OK in 338ms (Views: 299.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 17:02:06 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 263ms (Views: 216.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 17:02:07 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (1.6ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (116.8ms)
+Completed 200 OK in 414ms (Views: 373.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 17:02:08 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (1.6ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 255ms (Views: 216.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 17:04:52 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 278ms (Views: 247.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 17:04:54 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (6.7ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (97.6ms)
+Completed 200 OK in 369ms (Views: 339.9ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/seas/8" for 127.0.0.1 at 2019-07-23 17:04:57 +0100
+Processing by SeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rtJ82V7+r9g6M7NXzmHROrh42+g+3B3gGchrlWHoS6+iAWtY9g96bq9OUAdA5wTQWl3HsZ85j1kK5hIPBE4tCg==", "id"=>"8"}
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/seas_controller.rb:44:in `destroy'
+Started GET "/seas/new" for 127.0.0.1 at 2019-07-23 17:08:45 +0100
+Processing by SeasController#new as HTML
+  Rendering seas/new.html.erb within layouts/application
+  Rendered seas/new.html.erb within layouts/application (102.7ms)
+Completed 200 OK in 442ms (Views: 296.1ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/seas" for 127.0.0.1 at 2019-07-23 17:09:03 +0100
+Processing by SeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tlzXI3a7/D8MM5usUh/lmMi8yvHJIa1hdmEaO+yNSjy6j8Ci3kopiZlOePzcmTByKpnWqGjEP9hlT2OhiSssmQ==", "sea"=>{"name"=>"brexit", "temperature"=>"34534545646756756", "bio"=>"sdfdfgd", "image_url"=>"https://cdn.images.express.co.uk/img/dynamic/139/590x/boris-johnson-prime-minister-tory-leader-results-jeremy-hunt-PM-brexit-cabinet-1156755.jpg?r=1563890305058", "mood"=>"wrter", "favorite_color"=>"erter", "scariest_creature"=>"erteryrty", "has_mermaids"=>"1"}, "commit"=>"Create Sea"}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "seas" ("name", "temperature", "bio", "image_url", "mood", "favorite_color", "scariest_creature", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "brexit"], ["temperature", 3.4534545646756756e+16], ["bio", "sdfdfgd"], ["image_url", "https://cdn.images.express.co.uk/img/dynamic/139/590x/boris-johnson-prime-minister-tory-leader-results-jeremy-hunt-PM-brexit-cabinet-1156755.jpg?r=1563890305058"], ["mood", "wrter"], ["favorite_color", "erter"], ["scariest_creature", "erteryrty"], ["created_at", "2019-07-23 16:09:03.712659"], ["updated_at", "2019-07-23 16:09:03.712659"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/seas/9
+Completed 302 Found in 68ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/seas/9" for 127.0.0.1 at 2019-07-23 17:09:03 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSea Load (1.0ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 292ms (Views: 260.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/seas/9/edit" for 127.0.0.1 at 2019-07-23 17:09:06 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 276ms (Views: 254.3ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/seas/9" for 127.0.0.1 at 2019-07-23 17:09:09 +0100
+Processing by SeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uAwdHBY0j12jG+ZdQSBr7GFUqse3J/3QsDCIQQDMfRS03wqdvsVa6zZmBQ3Ppr4Gg3G2nhbCb2mjHvHbZWobsQ==", "id"=>"9"}
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/seas_controller.rb:44:in `destroy'
+Started GET "/seas/" for 127.0.0.1 at 2019-07-23 17:09:59 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.4ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 321ms (Views: 305.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 17:10:03 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 205ms (Views: 176.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 17:10:08 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.6ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 249ms (Views: 231.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/seas/9" for 127.0.0.1 at 2019-07-23 17:10:10 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 222ms (Views: 188.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seas/9" for 127.0.0.1 at 2019-07-23 17:10:42 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 325ms (Views: 181.0ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/seas/9/edit" for 127.0.0.1 at 2019-07-23 17:10:45 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSea Load (0.8ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (85.4ms)
+Completed 200 OK in 288ms (Views: 259.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/seas/9" for 127.0.0.1 at 2019-07-23 17:10:47 +0100
+Processing by SeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xmCZzAyVyHwVfJGVknSBZDvl0uNJSmcm9XQ1qjlqPm7Ks45NpGQdyoABcsUc8lSO2cDOuuiv9Z/mWkwwXMxYyw==", "id"=>"9"}
+  [1m[36mSea Load (1.1ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "seas" WHERE "seas"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/seas
+Completed 302 Found in 44ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 17:10:47 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.1ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 282ms (Views: 254.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/seas/8" for 127.0.0.1 at 2019-07-23 17:10:52 +0100
+Processing by SeasController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/show.html.erb within layouts/application
+  Rendered seas/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 210ms (Views: 182.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/seas/8/edit" for 127.0.0.1 at 2019-07-23 17:10:53 +0100
+Processing by SeasController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSea Load (1.3ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering seas/edit.html.erb within layouts/application
+  Rendered seas/edit.html.erb within layouts/application (87.2ms)
+Completed 200 OK in 302ms (Views: 266.5ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/seas/8" for 127.0.0.1 at 2019-07-23 17:10:55 +0100
+Processing by SeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XO6TJJt6stsxx7N3b6WTdVVdnj17Ur6z0gmF2Y3Yo5FQPYSlM4tnbaS6UCfhI0aft3iCZNq3LArBJ/xD6H7FNA==", "id"=>"8"}
+  [1m[36mSea Load (0.9ms)[0m  [1m[34mSELECT  "seas".* FROM "seas" WHERE "seas"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.2ms)[0m  [1m[31mDELETE FROM "seas" WHERE "seas"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/seas
+Completed 302 Found in 56ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/seas" for 127.0.0.1 at 2019-07-23 17:10:55 +0100
+Processing by SeasController#index as HTML
+  Rendering seas/index.html.erb within layouts/application
+  [1m[36mSea Load (1.1ms)[0m  [1m[34mSELECT "seas".* FROM "seas"[0m
+  Rendered seas/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 263ms (Views: 238.2ms | ActiveRecord: 1.1ms)
+
+
