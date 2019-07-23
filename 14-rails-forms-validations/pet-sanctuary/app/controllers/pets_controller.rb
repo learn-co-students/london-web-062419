@@ -22,14 +22,24 @@ class PetsController < ApplicationController
   def create
     # Create pet here
     @pet = Pet.create(pet_params)
-    redirect_to pets_path
+    if @pet.valid?
+      redirect_to pets_path
+    else
+      flash[:errors] = @pet.errors.full_messages
+      redirect_to new_pet_path
+    end
   end
 
   def update
     @pet = Pet.find(params[:id])
     # Update pet here
     @pet.update(pet_params)
-    redirect_to pet_path(@pet.id)
+    if @pet.valid?
+      redirect_to pet_path(@pet.id)
+    else
+      flash[:errors] = @pet.errors.full_messages
+      redirect_to edit_pet_path(@pet)
+    end
   end
 
   def destroy
