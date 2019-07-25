@@ -1,0 +1,7 @@
+<h2>Who's in this:</h2>
+
+<% @bloggers.each do |blogger| %>
+  <ul>
+    <%= link_to blogger.name, blogger %>
+  </ul>
+<% end %>
