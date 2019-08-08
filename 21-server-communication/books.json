@@ -14,15 +14,15 @@
     },
     {
       "id": 3,
-      "title": "White Teeth",
-      "author": "Zadie Smith",
-      "img": "https://images-na.ssl-images-amazon.com/images/I/412BMH3wiIL._SX322_BO1,204,203,200_.jpg"
+      "title": "sss",
+      "author": "sdfsd",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/41oS2tKs2TL._SX324_BO1,204,203,200_.jpg"
     },
     {
       "id": 4,
-      "author": "Zadie Smith",
+      "author": "Zadie Smddddddith",
       "img": "https://images-na.ssl-images-amazon.com/images/I/41oS2tKs2TL._SX324_BO1,204,203,200_.jpg",
-      "title": "On Beauty"
+      "title": "on Beauty"
     },
     {
       "id": 5,
@@ -49,24 +49,6 @@
       "title": "The Bluest Eye"
     },
     {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "title": "dddd",
-      "author": "sdfsd",
-      "img": "ddd",
-      "id": 13
-    },
-    {
       "title": "dddd",
       "author": "sdfsd",
       "img": "ddd",
@@ -74,8 +56,8 @@
     },
     {
       "title": "sss",
-      "author": "sss",
-      "img": "sss",
+      "author": "sdfsd",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/41oS2tKs2TL._SX324_BO1,204,203,200_.jpg",
       "id": 15
     }
   ]
