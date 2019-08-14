@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./app.js"></script>
+    <title>mastering fetch</title>
+  </head>
+  <body>
+    <div class="containter">
+      <h1>
+        <span class="backdrop">🐒</span>
+        <span class="backdrop">🐕</span>
+        <span class="backdrop">dog show</span>
+        <span class="backdrop">🦴</span>
+        <span class="backdrop">🙈</span>
+      </h1>
+      <button class="button">get a pupper</button>
+
+      <div class="container-dogs backdrop">
+        <div class="column">
+          <h1>🐶</h1>
+          <h3 id="dog-name">dog name</h3>
+          <h4 id="dog-age">dog age</h4>
+          <img src="" alt="dog" />
+        </div>
+        <div class="column">
+          <h1>🐩</h1>
+          <!-- for security reasons, even if we're overwriting the default -->
+          <!-- event behaviour, it's important that we have the action set -->
+          <!-- as post - not to accidentally leak the post form data -->
+          <!-- into the url bar where it can be persisted in the browser history -->
+          <!-- or some server logs -->
+          <form action="POST">
+            <h3>update the dog</h3>
+            <div class="form-element">
+              <label for="dog-name">name</label>
+              <input id="dog-name" type="text" />
+            </div>
+            <div class="form-element">
+              <label for="dog-age">age</label>
+              <input id="dog-age" type="text" />
+            </div>
+            <div class="form-element">
+              <label for="dog-image">image src</label>
+              <input id="dog-image" type="text" />
+            </div>
+            <div class="form-element">
+              <input class="button" type="submit" value="do it!" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

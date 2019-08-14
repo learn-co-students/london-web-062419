@@ -1,0 +1,50 @@
+html {
+  background-color: bisque;
+}
+
+.container-dogs {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+.containter {
+  text-align: center;
+}
+
+.column {
+  width: 50%;
+  text-align: center;
+  max-height: 400px;
+}
+
+.form-element {
+  margin: 10px;
+  text-align: center;
+}
+
+.backdrop {
+  background-color: antiquewhite;
+  border-radius: 30px;
+  margin: 30px;
+}
+
+.button {
+  background-color: coral;
+  border-radius: 9px;
+  opacity: 0.6;
+  border: none;
+  padding: 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+img {
+  max-width: 300px;
+}
+
+.button:hover {
+  opacity: 0.4;
+}
