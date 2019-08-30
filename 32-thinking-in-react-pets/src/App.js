@@ -1,16 +1,33 @@
 import React from 'react'
 
-import Filters from './components/Filters'
-import PetBrowser from './components/PetBrowser'
+import Search from './components/Search'
+import PetsContainer from './components/PetsContainer'
 
-import AllPets from './data/pets'
+const API_ENDPOINT = 'http://localhost:3003/pets'
 
 class App extends React.Component {
   state = {
-    pets: [],
-    filters: {
-      type: 'all'
-    }
+    pets: []
+  }
+
+  performSearch = (petType) => {
+    console.log(petType)
+    fetch(
+      petType === 'all' ? API_ENDPOINT : `${API_ENDPOINT}?type=${petType}`
+    )
+      .then(res => res.json())
+      .then(pets => this.setState({ pets }))
+  }
+
+  adoptPet = (petId) => {
+    this.setState({
+      pets: this.state.pets.map(pet => {
+        if (pet.id === petId) {
+          pet.isAdopted = true
+        }
+        return pet
+      })
+    })
   }
 
   render() {
@@ -22,10 +39,10 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters />
+              <Search performSearch={this.performSearch} />
             </div>
             <div className="twelve wide column">
-              <PetBrowser />
+              <PetsContainer pets={this.state.pets} adoptPet={this.adoptPet} />
             </div>
           </div>
         </div>
