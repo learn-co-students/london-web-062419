@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  border: 20px #beef solid;
 }
 
 .App-logo {
@@ -30,4 +31,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.hi5-container {
+  border: 15px salmon solid;
 }

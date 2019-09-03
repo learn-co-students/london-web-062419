@@ -1,34 +1,32 @@
-import React from 'react'
+import React from "react";
 
-import Search from './components/Search'
-import PetsContainer from './components/PetsContainer'
+import Search from "./components/Search";
+import PetsContainer from "./components/PetsContainer";
 
-const API_ENDPOINT = 'http://localhost:3003/pets'
+const API_ENDPOINT = "http://localhost:3003/pets";
 
 class App extends React.Component {
   state = {
     pets: []
-  }
+  };
 
-  performSearch = (petType) => {
-    console.log(petType)
-    fetch(
-      petType === 'all' ? API_ENDPOINT : `${API_ENDPOINT}?type=${petType}`
-    )
+  performSearch = petType => {
+    console.log(petType);
+    fetch(petType === "all" ? API_ENDPOINT : `${API_ENDPOINT}?type=${petType}`)
       .then(res => res.json())
-      .then(pets => this.setState({ pets }))
-  }
+      .then(pets => this.setState({ pets }));
+  };
 
-  adoptPet = (petId) => {
+  adoptPet = petId => {
     this.setState({
       pets: this.state.pets.map(pet => {
         if (pet.id === petId) {
-          pet.isAdopted = true
+          pet.isAdopted = true;
         }
-        return pet
+        return pet;
       })
-    })
-  }
+    });
+  };
 
   render() {
     return (
@@ -47,8 +45,8 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
